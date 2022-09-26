@@ -1,0 +1,4 @@
+- [ ] absolute paths
+- [ ] prettier, eslint
+- [ ] TS
+- [ ] 404
