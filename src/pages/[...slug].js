@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { gql } from '@apollo/client';
+import xss from 'xss';
 import client from '../../apolloClient';
 
 export default function PostPage({ post }) {
@@ -12,7 +13,11 @@ export default function PostPage({ post }) {
         width={300}
         height={200}
       />
-      {/* <div dangerouslySetInnerHTML={{ __html: post.description.html }} /> */}
+      <div
+        dangerouslySetInnerHTML={{
+          __html: xss(post.description.html),
+        }}
+      />
     </div>
   );
 }
