@@ -2,3 +2,4 @@
 - [ ] prettier, eslint
 - [ ] TS
 - [ ] 404
+- [ ] sanitize

@@ -1,0 +1,82 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:prettier/recommended",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "prettier",
+    "react",
+    "@typescript-eslint",
+    "import"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "react/prop-types": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/prefer-interface": 0,
+    "@typescript-eslint/camelcase": 0,
+    "@typescript-eslint/ban-ts-ignore": 0,
+    "@typescript-eslint/ban-ts-comment": 0,
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": [
+      "error"
+    ],
+    "react/jsx-filename-extension": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/require-default-props": 0,
+    "no-restricted-syntax": 0,
+    "@typescript-eslint/no-var-requires": 0,
+    "no-use-before-define": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "global-require": 0,
+    "react/react-in-jsx-scope": 0,
+    "import/prefer-default-export": 0,
+    "react/function-component-definition": 0,
+    "no-console": "error",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
+}
