@@ -25,9 +25,6 @@
       ]
     },
     "baseUrl": "src",
-    "types": [
-      "cypress"
-    ],
     "incremental": true
   },
   "include": [
