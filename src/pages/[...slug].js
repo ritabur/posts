@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { gql } from '@apollo/client';
 import xss from 'xss';
-import client from '../../apolloClient';
+import client from 'apolloClient';
 
 export default function PostPage({ post }) {
   return (

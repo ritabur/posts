@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { gql } from '@apollo/client';
 import * as dayjs from 'dayjs';
 import xss from 'xss';
-import client from '../../apolloClient';
+import client from 'apolloClient';
 
 export default function Home({ posts }) {
   return (
