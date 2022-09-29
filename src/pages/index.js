@@ -9,9 +9,12 @@ export default function Home({ posts }) {
     <div>
       <ul>
         {posts.map((entry) => (
-          <li key={entry.id}>
+          <li key={entry.id} className="mb-2">
             <Link href={entry.slug} passHref>
-              <a href="replace" className="font-semibold text-blue-800">
+              <a
+                href="replace"
+                className="font-semibold text-blue-800 underline"
+              >
                 {entry.title}
               </a>
             </Link>

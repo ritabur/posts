@@ -5,13 +5,13 @@ import client from 'apolloClient';
 
 export default function PostPage({ post }) {
   return (
-    <div>
-      <div className="font-semibold">{post.title}</div>
+    <>
+      <div className="font-semibold pb-1">{post.title}</div>
       <div className="w-[200px] h-[100px] relative">
         <Image
           src={post.image.url}
           layout="fill"
-          objectFit="contain"
+          objectFit="cover"
           alt={`${post.title} post image`}
         />
       </div>
@@ -19,8 +19,9 @@ export default function PostPage({ post }) {
         dangerouslySetInnerHTML={{
           __html: xss(post.description.html),
         }}
+        className="pt-1"
       />
-    </div>
+    </>
   );
 }
 

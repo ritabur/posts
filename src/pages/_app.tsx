@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="description" content="Posts" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="container mx-auto py-4">
+      <main className="container mx-auto py-2">
         <Component {...pageProps} />
       </main>
     </>
