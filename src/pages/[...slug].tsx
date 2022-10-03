@@ -1,9 +1,30 @@
 import Image from 'next/image';
+import { ParsedUrlQuery } from 'querystring';
+import { GetStaticProps, GetStaticPaths } from 'next';
 import { gql } from '@apollo/client';
 import xss from 'xss';
 import client from 'apolloClient';
 
-export default function PostPage({ post }) {
+interface IParams extends ParsedUrlQuery {
+  slug: string;
+}
+
+type Description = {
+  html: string;
+};
+
+type ImageType = {
+  url: string;
+};
+
+type Post = {
+  image: ImageType;
+  description: Description;
+  title: string;
+  slug: string;
+};
+
+export default function PostPage({ post }: { post: Post }) {
   return (
     <>
       <div className="font-semibold pb-1">{post.title}</div>
@@ -26,7 +47,7 @@ export default function PostPage({ post }) {
 }
 
 // for generating individual page urls
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const { data } = await client.query({
     query: gql`
       query {
@@ -37,15 +58,16 @@ export async function getStaticPaths() {
     `,
   });
   const { posts } = data;
-  const paths = posts.map((test) => ({
-    params: { slug: [test.slug] },
+  const paths = posts.map((post: Post) => ({
+    params: { slug: [post.slug] },
   }));
   return { paths, fallback: false };
-}
+};
 
 // for getting info for the individual pages generated
-export async function getStaticProps({ params }) {
-  const slug = params.slug[0];
+export const getStaticProps: GetStaticProps = async (context) => {
+  const { slug: arr } = context.params as IParams;
+  const slug = arr[0];
   const { data } = await client.query({
     query: gql`
       query PostBySlug($slug: String!) {
@@ -69,4 +91,4 @@ export async function getStaticProps({ params }) {
   return {
     props: { post },
   };
-}
+};

@@ -44,6 +44,7 @@
     "@typescript-eslint/camelcase": 0,
     "@typescript-eslint/ban-ts-ignore": 0,
     "@typescript-eslint/ban-ts-comment": 0,
+    "@typescript-eslint/no-non-null-assertion": 0,
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": [
       "error"

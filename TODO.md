@@ -1,5 +1,5 @@
 - [x] absolute paths
 - [x] prettier, eslint
-- [ ] TS
+- [x] TS
 - [ ] 404
 - [x] sanitize
