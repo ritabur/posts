@@ -4,6 +4,7 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 import { gql } from '@apollo/client';
 import xss from 'xss';
 import client from 'apolloClient';
+import React from 'react';
 
 interface IParams extends ParsedUrlQuery {
   slug: string;
@@ -26,7 +27,7 @@ type Post = {
 
 export default function PostPage({ post }: { post: Post }) {
   return (
-    <>
+    <div data-test="post-page">
       <div className="font-semibold pb-1">{post.title}</div>
       <div className="w-[200px] h-[100px] relative">
         <Image
@@ -42,7 +43,7 @@ export default function PostPage({ post }: { post: Post }) {
         }}
         className="pt-1"
       />
-    </>
+    </div>
   );
 }
 

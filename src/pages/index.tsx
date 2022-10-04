@@ -22,11 +22,15 @@ type Posts = {
 
 export default function Home({ posts }: Posts) {
   return (
-    <ul>
+    <ul data-test="posts">
       {posts.map((entry: Post) => (
         <li key={entry.id} className="mb-2">
           <Link href={entry.slug} passHref>
-            <a href="replace" className="font-semibold text-blue-800 underline">
+            <a
+              href="replace"
+              className="font-semibold text-blue-800 underline"
+              data-test="post-link"
+            >
               {entry.title}
             </a>
           </Link>

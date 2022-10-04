@@ -1,5 +1,7 @@
 - [x] absolute paths
 - [x] prettier, eslint
 - [x] TS
-- [ ] 404
 - [x] sanitize
+- [ ] e2e
+- [ ] gh actions
+- [ ] perf
