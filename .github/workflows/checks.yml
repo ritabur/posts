@@ -18,12 +18,12 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
-    - name: Run e2e tests
+    - name: Build app
+      run: npm run build
+    - name: Serve app
+      run: npm run start
+    - name: Run Playwright tests
       run: npx playwright test
-      with:
-        build: npm run build
-        start: npm run serve
-        wait-on: http://localhost:3000
     - uses: actions/upload-artifact@v2
       if: always()
       with:
