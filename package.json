@@ -8,7 +8,9 @@
     "start": "next start",
     "check-types": "tsc --noemit",
     "lint": "eslint src/**/*.tsx && npm run check-types",
-    "prepare": "husky install"
+    "test": "npx playwright test",
+    "prepare": "husky install",
+    "vercel": "vercel link"
   },
   "dependencies": {
     "@apollo/client": "^3.6.9",
@@ -38,7 +40,8 @@
     "lint-staged": "^13.0.3",
     "postcss": "^8.4.16",
     "prettier": "^2.7.1",
-    "tailwindcss": "^3.1.8"
+    "tailwindcss": "^3.1.8",
+    "vercel": "^28.4.8"
   },
   "lint-staged": {
     "*.{tsx,ts,js,jsx}": [
