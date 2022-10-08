@@ -3,5 +3,5 @@
 - [x] TS
 - [x] sanitize
 - [ ] e2e
-- [ ] gh actions
+- [ ] gh actions: https://github.com/orgs/vercel/discussions/285
 - [ ] perf
