@@ -2,6 +2,5 @@
 - [x] prettier, eslint
 - [x] TS
 - [x] sanitize
-- [ ] e2e
-- [ ] gh actions: https://github.com/orgs/vercel/discussions/285
-- [ ] perf
+- [x] e2e
+- [x] gh actions: https://github.com/orgs/vercel/discussions/285
